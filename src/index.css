@@ -1,0 +1,67 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: #333333;
+}
+
+@layer base {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-semibold text-brown-dark;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-brown text-white hover:bg-brown-dark px-4 py-2 rounded-md transition-colors;
+  }
+
+  .btn-secondary {
+    @apply bg-green text-white hover:bg-green-dark px-4 py-2 rounded-md transition-colors;
+  }
+
+  .btn-accent {
+    @apply bg-blue text-white hover:bg-blue-dark px-4 py-2 rounded-md transition-colors;
+  }
+
+  .btn-outline-brown {
+    @apply border border-brown text-brown hover:bg-brown/5 px-4 py-2 rounded-md transition-colors;
+  }
+
+  .btn-outline-green {
+    @apply border border-green text-green hover:bg-green/5 px-4 py-2 rounded-md transition-colors;
+  }
+
+  .container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .card {
+    @apply bg-white rounded-lg shadow-md overflow-hidden;
+  }
+
+  .dropdown-select {
+    @apply w-full px-3 py-2 border border-gray-300 rounded-md text-foreground bg-white;
+  }
+
+  .input-field {
+    @apply w-full px-3 py-2 border border-gray-300 rounded-md text-foreground bg-white;
+  }
+
+  .badge-brown {
+    @apply bg-brown text-white text-xs px-2 py-1 rounded;
+  }
+
+  .badge-green {
+    @apply bg-green text-white text-xs px-2 py-1 rounded;
+  }
+}
