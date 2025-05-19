@@ -79,14 +79,24 @@ export default function Contact() {
                       <p className="text-gray-600">Closed</p>
                     </div>
                   </div>
-                  
+
                 </div>
 
                 <div className="mt-8">
                   <h3 className="font-semibold mb-4">Our Location</h3>
-                  <div className="aspect-video bg-gray-200 rounded-lg flex items-center justify-center">
-                    <p className="text-gray-500">Map would be displayed here</p>
+                  <div className="w-full aspect-video">
+                    <iframe
+                      width="550"
+                      height="300"
+                      frameBorder="0" 
+                      style={{ border: 0 }}
+                      referrerPolicy="no-referrer-when-downgrade"
+                      src={`https://www.google.com/maps/embed/v1/place?key=${import.meta.env.VITE_GOOGLE_MAPS_API_KEY}&q=Reliable+Towers,Nairobi+Kenya`}
+                      allowFullScreen
+                      onError={(e) => console.error("Map failed to load", e)}>
+                    </iframe>
                   </div>
+
                 </div>
               </div>
             </div>
