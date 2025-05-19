@@ -24,11 +24,11 @@ export default function Contact() {
                 </div>
                 <h3 className="font-semibold mb-2">Our Office</h3>
                 <p className="text-gray-600">
-                  123 Real Estate Blvd
+                  4th Floor, Reliable Towers
                   <br />
-                  Suite 456
+                  Mogotio Rd.
                   <br />
-                  Los Angeles, CA 90001
+                  Parklands, Nairobi
                 </p>
               </div>
 
@@ -38,11 +38,9 @@ export default function Contact() {
                 </div>
                 <h3 className="font-semibold mb-2">Phone</h3>
                 <p className="text-gray-600">
-                  Sales: (555) 123-4567
+                  +254 782654122
                   <br />
-                  Support: (555) 987-6543
-                  <br />
-                  Fax: (555) 246-8910
+                  +254 781735668
                 </p>
               </div>
 
@@ -52,11 +50,8 @@ export default function Contact() {
                 </div>
                 <h3 className="font-semibold mb-2">Email</h3>
                 <p className="text-gray-600">
-                  info@maroonestate.com
+                  andrewm@nimblekenya.co.ke
                   <br />
-                  sales@maroonestate.com
-                  <br />
-                  support@maroonestate.com
                 </p>
               </div>
             </div>
@@ -74,23 +69,17 @@ export default function Contact() {
                     <Clock className="h-5 w-5 text-maroon mr-3 mt-0.5" />
                     <div>
                       <h3 className="font-semibold">Monday - Friday</h3>
-                      <p className="text-gray-600">9:00 AM - 6:00 PM</p>
+                      <p className="text-gray-600">8:00 AM - 5:00 PM</p>
                     </div>
                   </div>
                   <div className="flex items-start">
                     <Clock className="h-5 w-5 text-maroon mr-3 mt-0.5" />
                     <div>
-                      <h3 className="font-semibold">Saturday</h3>
-                      <p className="text-gray-600">10:00 AM - 4:00 PM</p>
-                    </div>
-                  </div>
-                  <div className="flex items-start">
-                    <Clock className="h-5 w-5 text-maroon mr-3 mt-0.5" />
-                    <div>
-                      <h3 className="font-semibold">Sunday</h3>
+                      <h3 className="font-semibold">Saturday & Sunday</h3>
                       <p className="text-gray-600">Closed</p>
                     </div>
                   </div>
+                  
                 </div>
 
                 <div className="mt-8">

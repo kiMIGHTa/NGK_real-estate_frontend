@@ -12,8 +12,8 @@ export default function About() {
             <div className="max-w-3xl mx-auto text-center mb-12">
               <h1 className="text-3xl font-bold mb-4">About Our Company</h1>
               <p className="text-gray-600">
-                We're dedicated to helping you find the perfect property and making the buying process as smooth as
-                possible.
+              At NGK Real estate, our focus is on providing peace of mind and letting our clients
+              focus on what they do best while we take care of the rest.
               </p>
             </div>
 
@@ -22,19 +22,37 @@ export default function About() {
                 <h2 className="text-2xl font-bold mb-4">Our Story</h2>
                 <div className="space-y-4">
                   <p>
-                    Founded in 2010, our real estate company has grown from a small local agency to one of the most
-                    trusted names in the industry. Our journey began with a simple mission: to help people find homes
-                    they love at prices they can afford.
+                    At NGK Real estate, we specialize in providing comprehensive property
+                    management and rent collection services to residential and commercial property
+                    owners. We proudly serve country wide, ensuring both property owners and
+                    tenants experience seamless and stress free experience.
+
                   </p>
                   <p>
-                    Over the years, we've expanded our services to include property management, investment consulting,
-                    and commercial real estate, all while maintaining our commitment to personalized service and client
-                    satisfaction.
+                    With the help of our well improvised software, our mission is to simplify
+                    property management and provide consistent, professional service with a focus on
+                    reliability and client satisfaction. Whether you are a first time landlord or a
+                    seasoned real estate investor, we handle every aspect of property management
+                    from rent collection and maintenance to tenant relations and leasing. Just sit,relax
+                    and enjoy as we make things easier for you.
                   </p>
                   <p>
-                    Today, we're proud to have helped thousands of families find their dream homes and countless
-                    investors build successful real estate portfolios. Our team of experienced agents combines deep
-                    local knowledge with cutting-edge technology to provide an unmatched real estate experience.
+                    We offer a range of services including;
+                    <br />
+                    1. RENT COLLECTIONS AND PAYMENT PROCESSING.
+                    <br />
+                    2. PROPERTY MAINTENANCE AND REPAIRS.
+                    <br />
+                    3. TENANT SCREENING AND LEASING.
+                    <br />
+                    4. FINANCIAL REPORTING AND MORE AS STATED BELOW.
+                  </p>
+                  <p>
+                    What sets us apart is our commitment to transparency, proactive communication
+                    and tailoured solutions that meet the unique needs of our clients. We pride
+                    ourselves on building a long-term relationships with property owners and tenants
+                    alike, helping them feel confident and secure in every interaction.
+                    
                   </p>
                 </div>
               </div>

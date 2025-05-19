@@ -1,43 +1,59 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { Link, useParams } from "react-router-dom"
 import { Bed, Bath, Square, Car, MapPin, Calendar, Heart, Share, ArrowLeft } from "lucide-react"
 import Header from "../components/Header"
 import Footer from "../components/Footer"
 import PropertyGallery from "../components/PropertyGallery"
 import ContactForm from "../components/ContactForm"
+import { getPropertyItem } from "../apiUtils/propertyDetails"
 
 export default function PropertyDetail() {
-  const { id } = useParams()
+  const { propertyId } = useParams()
   const [activeTab, setActiveTab] = useState("description")
+  const [property, setProperty] = useState([])
+
+  useEffect(() => {
+          const fetchProperty = async () => {
+              try {
+                  const data = await getPropertyItem(propertyId);
+                  console.log("Fetched property item:", data);
+                  setProperty(data);
+              } catch (error) {
+                  console.error("Error fetching property item:", error);
+              }
+          };
+  
+          fetchProperty();
+      }, [propertyId]);
 
   // In a real app, you would fetch property data based on the ID
-  const property = {
-    id,
-    title: "Luxury Waterfront Villa",
-    price: "$1,250,000",
-    address: "123 Oceanview Drive, Malibu, CA 90210",
-    description:
-      "This stunning waterfront villa offers breathtaking views and luxurious living spaces. With 4 bedrooms, 3.5 bathrooms, and a spacious open floor plan, this property is perfect for entertaining. The gourmet kitchen features top-of-the-line appliances and custom cabinetry. The master suite includes a private balcony, walk-in closet, and spa-like bathroom. Outside, you'll find a beautiful pool, outdoor kitchen, and meticulously landscaped grounds. Additional features include a 2-car garage, smart home technology, and energy-efficient systems.",
-    beds: 4,
-    baths: 3.5,
-    sqft: 3200,
-    garage: 2,
-    yearBuilt: 2020,
-    features: [
-      "Waterfront",
-      "Swimming Pool",
-      "Outdoor Kitchen",
-      "Smart Home",
-      "Energy Efficient",
-      "Hardwood Floors",
-      "Granite Countertops",
-      "Walk-in Closets",
-      "Central Air",
-      "Fireplace",
-    ],
-  }
+  // const property = {
+  //   id,
+  //   title: "Luxury Waterfront Villa",
+  //   price: "$1,250,000",
+  //   address: "123 Oceanview Drive, Malibu, CA 90210",
+  //   description:
+  //     "This stunning waterfront villa offers breathtaking views and luxurious living spaces. With 4 bedrooms, 3.5 bathrooms, and a spacious open floor plan, this property is perfect for entertaining. The gourmet kitchen features top-of-the-line appliances and custom cabinetry. The master suite includes a private balcony, walk-in closet, and spa-like bathroom. Outside, you'll find a beautiful pool, outdoor kitchen, and meticulously landscaped grounds. Additional features include a 2-car garage, smart home technology, and energy-efficient systems.",
+  //   beds: 4,
+  //   baths: 3.5,
+  //   sqft: 3200,
+  //   garage: 2,
+  //   yearBuilt: 2020,
+  //   features: [
+  //     "Waterfront",
+  //     "Swimming Pool",
+  //     "Outdoor Kitchen",
+  //     "Smart Home",
+  //     "Energy Efficient",
+  //     "Hardwood Floors",
+  //     "Granite Countertops",
+  //     "Walk-in Closets",
+  //     "Central Air",
+  //     "Fireplace",
+  //   ],
+  // }
 
   // Similar properties would be fetched based on the current property
   const similarProperties = [
@@ -90,7 +106,7 @@ export default function PropertyDetail() {
             <div className="lg:col-span-2">
               <div className="flex flex-col md:flex-row md:items-center justify-between mb-6">
                 <div>
-                  <h1 className="text-3xl font-bold">{property.title}</h1>
+                  <h1 className="text-3xl font-bold">{property.name}</h1>
                   <div className="flex items-center text-gray-600 mt-2">
                     <MapPin className="h-4 w-4 mr-1" />
                     <span>{property.address}</span>
@@ -101,35 +117,35 @@ export default function PropertyDetail() {
                 </div>
               </div>
 
-              <PropertyGallery />
+              <PropertyGallery images={property.images}/>
 
               <div className="flex flex-wrap gap-6 my-8 p-4 bg-brown-50 rounded-lg">
                 <div className="flex items-center">
                   <Bed className="h-5 w-5 text-gray-500 mr-2" />
                   <div>
                     <div className="text-sm text-gray-500">Bedrooms</div>
-                    <div className="font-semibold">{property.beds}</div>
+                    <div className="font-semibold">{property.bedrooms}</div>
                   </div>
                 </div>
                 <div className="flex items-center">
                   <Bath className="h-5 w-5 text-gray-500 mr-2" />
                   <div>
                     <div className="text-sm text-gray-500">Bathrooms</div>
-                    <div className="font-semibold">{property.baths}</div>
+                    <div className="font-semibold">{property.bathrooms}</div>
                   </div>
                 </div>
                 <div className="flex items-center">
                   <Square className="h-5 w-5 text-gray-500 mr-2" />
                   <div>
                     <div className="text-sm text-gray-500">Square Feet</div>
-                    <div className="font-semibold">{property.sqft}</div>
+                    <div className="font-semibold">{property.land_area}</div>
                   </div>
                 </div>
                 <div className="flex items-center">
                   <Car className="h-5 w-5 text-gray-500 mr-2" />
                   <div>
                     <div className="text-sm text-gray-500">Garage</div>
-                    <div className="font-semibold">{property.garage} Cars</div>
+                    <div className="font-semibold">{property.garage_size} Cars</div>
                   </div>
                 </div>
                 <div className="flex items-center">
@@ -153,7 +169,7 @@ export default function PropertyDetail() {
                   >
                     Description
                   </button>
-                  <button
+                  {/* <button
                     className={`px-4 py-2 font-medium ${
                       activeTab === "features"
                         ? "text-brown border-b-2 border-brown"
@@ -162,7 +178,7 @@ export default function PropertyDetail() {
                     onClick={() => setActiveTab("features")}
                   >
                     Features
-                  </button>
+                  </button> */}
                   <button
                     className={`px-4 py-2 font-medium ${
                       activeTab === "map" ? "text-brown border-b-2 border-brown" : "text-gray-500 hover:text-gray-700"
@@ -180,7 +196,7 @@ export default function PropertyDetail() {
                     </div>
                   )}
 
-                  {activeTab === "features" && (
+                  {/* {activeTab === "features" && (
                     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
                       {property.features.map((feature, index) => (
                         <div key={index} className="flex items-center">
@@ -189,7 +205,7 @@ export default function PropertyDetail() {
                         </div>
                       ))}
                     </div>
-                  )}
+                  )} */}
 
                   {activeTab === "map" && (
                     <div className="aspect-video bg-gray-200 rounded-lg flex items-center justify-center">
@@ -211,11 +227,12 @@ export default function PropertyDetail() {
                       className="w-16 h-16 rounded-full mr-4"
                     />
                     <div>
-                      <div className="font-semibold">Sarah Johnson</div>
-                      <div className="text-sm text-gray-600">Lead Real Estate Agent</div>
+                      <div className="font-semibold">{property.agent?.name}</div>
+                      <div className="text-sm text-gray-600">Real Estate Agent</div>
+                      <div className="text-sm text-gray-600">{property.agent?.company}</div>
                     </div>
                   </div>
-                  <ContactForm />
+                  <ContactForm propertyId={propertyId}/>
                 </div>
                 <div className="flex gap-4">
                   <button className="flex-1 flex items-center justify-center gap-2 border border-gray-300 rounded-md py-2 hover:bg-gray-50">
@@ -263,15 +280,15 @@ export default function PropertyDetail() {
                       <div className="flex justify-between text-sm text-gray-700">
                         <div className="flex items-center">
                           <Bed className="h-4 w-4 mr-1" />
-                          <span>{property.beds} Beds</span>
+                          <span>{property.bedrooms} Beds</span>
                         </div>
                         <div className="flex items-center">
                           <Bath className="h-4 w-4 mr-1" />
-                          <span>{property.baths} Baths</span>
+                          <span>{property.bathrooms} Baths</span>
                         </div>
                         <div className="flex items-center">
                           <Square className="h-4 w-4 mr-1" />
-                          <span>{property.sqft} sqft</span>
+                          <span>{property.land_area} sqft</span>
                         </div>
                       </div>
                     </div>
