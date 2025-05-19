@@ -2,33 +2,36 @@
 
 import { useState } from "react"
 import { Link } from "react-router-dom"
-import { Menu } from "lucide-react"
+import { Menu, Phone } from "lucide-react"
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-white">
-      <div className="container flex h-16 items-center justify-between">
-        <Link to="/" className="text-2xl font-bold text-brown">
-          LOGO
+      <div className="container flex h-20 items-center justify-between">
+        <Link to="/" className="">
+          <img src="/NIMLOGO(no text).png" alt="Logo" className="h-20" />
         </Link>
 
         <nav className="hidden md:flex gap-8 mx-auto">
-          <Link to="/" className="text-sm font-medium hover:text-brown transition-colors">
+          <Link to="/" className="text-base font-medium hover:text-brown transition-colors">
             Home
           </Link>
-          <Link to="/properties" className="text-sm font-medium hover:text-brown transition-colors">
+          <Link to="/properties" className="text-base font-medium hover:text-brown transition-colors">
             Properties
           </Link>
-          <Link to="/about" className="text-sm font-medium hover:text-brown transition-colors">
+          <Link to="/about" className="text-base font-medium hover:text-brown transition-colors">
             About
           </Link>
-          <Link to="/contact" className="text-sm font-medium hover:text-brown transition-colors">
+          <Link to="/contact" className="text-base font-medium hover:text-brown transition-colors">
             Contact
           </Link>
         </nav>
-
+        <div className="flex items-center gap-2">
+          <Phone className="h-5 w-5" />
+          <p>+254 782654122</p>
+        </div>
         <button className="md:hidden border border-gray-300 rounded-md p-2" onClick={() => setIsMenuOpen(!isMenuOpen)}>
           <Menu className="h-5 w-5" />
           <span className="sr-only">Toggle menu</span>
