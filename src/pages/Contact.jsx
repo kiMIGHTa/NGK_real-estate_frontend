@@ -38,9 +38,11 @@ export default function Contact() {
                 </div>
                 <h3 className="font-semibold mb-2">Phone</h3>
                 <p className="text-gray-600">
-                  +254 782654122
+                  +254 719064000
                   <br />
                   +254 781735668
+                  <br />
+                  +254 782654122
                 </p>
               </div>
 
@@ -86,8 +88,8 @@ export default function Contact() {
                   <h3 className="font-semibold mb-4">Our Location</h3>
                   <div className="w-full aspect-video">
                     <iframe
-                      width="550"
-                      height="300"
+                      width="400"
+                      height="250"
                       frameBorder="0" 
                       style={{ border: 0 }}
                       referrerPolicy="no-referrer-when-downgrade"

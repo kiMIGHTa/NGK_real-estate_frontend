@@ -68,8 +68,9 @@ export default function Footer() {
             <h3 className="text-lg font-semibold text-white mb-4">Contact Info</h3>
             <ul className="space-y-2">
               <li>4th Floor, Reliable Towers, Mogotio Rd.</li>
-              <li>Parklands, Nairobi</li>
-              <li>Phone : +254 782654122</li>
+              <li>Parklands, Nairobi</li> 
+              <li>Phone : +254 719064000</li>
+              <li>&emsp; &nbsp; &nbsp; &nbsp; &nbsp; : +254 781735668</li>
               <li>&emsp; &nbsp; &nbsp; &nbsp; &nbsp; : +254 782654122</li>
               <li>Email: andrewm@nimblekenya.co.ke</li>
               <li>Mon-Fri: 8:00 AM - 5:00 PM</li>

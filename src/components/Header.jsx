@@ -30,7 +30,7 @@ export default function Header() {
         </nav>
         <div className="flex items-center gap-2">
           <Phone className="h-5 w-5" />
-          <p>+254 782654122</p>
+          <p>+254 719064000</p>
         </div>
         <button className="md:hidden border border-gray-300 rounded-md p-2" onClick={() => setIsMenuOpen(!isMenuOpen)}>
           <Menu className="h-5 w-5" />
