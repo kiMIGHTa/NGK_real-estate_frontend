@@ -1,0 +1,4 @@
+{
+    "version": 2,
+    "buildCommand": "git lfs install && git lfs pull && npm run dev"
+  }
