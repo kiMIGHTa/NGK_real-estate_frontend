@@ -85,7 +85,7 @@ export default function About() {
                       />
                     </svg>
                   </div>
-                  <h3 className="font-semibold mb-2">Integrity</h3>
+                  <h3 className="font-semibold mb-2">Security</h3>
                   <p className="text-gray-600">
                     We believe in honest communication and transparent dealings with all our clients.
                   </p>
@@ -129,7 +129,7 @@ export default function About() {
                       />
                     </svg>
                   </div>
-                  <h3 className="font-semibold mb-2">Client-Focused</h3>
+                  <h3 className="font-semibold mb-2">Trust</h3>
                   <p className="text-gray-600">
                     Our clients' needs and satisfaction are at the center of everything we do.
                   </p>
