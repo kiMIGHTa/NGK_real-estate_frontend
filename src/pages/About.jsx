@@ -12,8 +12,8 @@ export default function About() {
             <div className="max-w-3xl mx-auto text-center mb-12">
               <h1 className="text-3xl font-bold mb-4">About Our Company</h1>
               <p className="text-gray-600">
-              At NGK Real estate, our focus is on providing peace of mind and letting our clients
-              focus on what they do best while we take care of the rest.
+                At NGK Real estate, our focus is on providing peace of mind and letting our clients
+                focus on what they do best while we take care of the rest.
               </p>
             </div>
 
@@ -52,15 +52,17 @@ export default function About() {
                     and tailoured solutions that meet the unique needs of our clients. We pride
                     ourselves on building a long-term relationships with property owners and tenants
                     alike, helping them feel confident and secure in every interaction.
-                    
+
                   </p>
                 </div>
               </div>
-              <div className="relative h-[400px]">
-                <img
-                  src="/placeholder.svg?height=400&width=600"
-                  alt="Our office"
-                  className="w-full h-full object-cover rounded-lg"
+              <div className="w-full aspect-video">
+                <video
+                  src="/NGKKenya.mp4"
+                  className="w-full h-full object-cover rounded-md border-3 border-black"
+                  controls
+                  // poster="/video-poster.jpg"
+                  preload="none" // Won't load until clicked
                 />
               </div>
             </div>
