@@ -7,7 +7,7 @@
         "config": {
           "distDir": "public",
           "installCommand": "git lfs install && npm install",
-          "buildCommand": "git lfs pull && npm run build"
+          "buildCommand": "git lfs pull && npm run dev"
         }
       }
     ]
