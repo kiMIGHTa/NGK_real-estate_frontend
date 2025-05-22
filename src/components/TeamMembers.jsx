@@ -15,7 +15,7 @@ export default function TeamMembers() {
       name: "Haist Kimani",
       position: "Senior Real Estate Agent",
       image: "/Haist.png?height=300&width=300",
-      bio: "Michael specializes in both residential and commercial properties and has deep knowledge on real estate marketing.",
+      bio: "Haist specializes in both residential and commercial properties and has deep knowledge on real estate marketing.",
     },
     {
       id: "3",
@@ -34,16 +34,26 @@ export default function TeamMembers() {
   ]
 
   return (
-    <div className="inline-flex grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 px-4 sm:px-0">
       {team.map((member) => (
-        <div key={member.id} className="card overflow-hidden">
+        <div
+          key={member.id}
+          className="card overflow-hidden hover:shadow-lg transition-shadow duration-300"
+        >
           <div className="aspect-square relative">
-            <img src={member.image || "/placeholder.svg"} alt={member.name} className="w-full h-full object-cover" />
+            <img
+              src={member.image}
+              alt={member.name}
+              className="w-full h-full object-cover"
+              loading="lazy"
+              // width={300}
+              // height={300}
+            />
           </div>
           <div className="p-4 text-center">
-            <h3 className="font-semibold text-lg">{member.name}</h3>
-            <p className="text-maroon text-sm mb-2">{member.position}</p>
-            <p className="text-gray-600 text-sm mb-4">{member.bio}</p>
+            <h3 className="font-semibold text-lg mb-1">{member.name}</h3>
+            <p className="text-maroon text-sm mb-3">{member.position}</p>
+            <p className="text-gray-600 text-sm mb-4 line-clamp-3">{member.bio}</p>
             <div className="flex justify-center space-x-4">
               <a href="#" className="text-gray-400 hover:text-maroon transition-colors">
                 <Facebook className="h-5 w-5" />
