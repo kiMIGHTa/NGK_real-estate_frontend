@@ -78,12 +78,30 @@ export default function Home() {
         {/* Hero Section */}
         <section className="relative">
           <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-black/50 z-10" />
-          <div
-            className="h-[650px] bg-cover bg-center"
-            style={{ backgroundImage: "url('/Home_image.png?height=600&width=1200')" }}
-          />
+          <div className="h-[650px] bg-cover bg-center relative">
+            {/* WebP (Modern Browsers) */}
+            <div
+              className="absolute inset-0 bg-cover bg-center"
+              style={{
+                backgroundImage: "url('/Home_image.webp')",
+                imageRendering: '-webkit-optimize-contrast'
+              }}
+            >
+              {/* Fallback (Older Browsers) */}
+              <div
+                className="absolute inset-0 bg-cover bg-center"
+                style={{
+                  backgroundImage: "url('/Home_image.png')",
+                  // Hide if WebP is supported
+                  '@supports (background-image: url("/Home_image.webp"))': {
+                    display: 'none'
+                  }
+                }}
+              />
+            </div>
+          </div>
           <div className="container absolute inset-0 z-20 flex flex-col items-center justify-center text-white">
-            <h1 className="text-9xl md:text-5xl lg:text-6xl font-bold text-center mb-6 text-blue-300">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-center mb-6 text-blue-300">
               NGK AGENCY
             </h1>
             <p className="text-xl md:text-2xl text-center mb-8 max-w-2xl">
