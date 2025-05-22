@@ -5,36 +5,36 @@ export default function TeamMembers() {
   const team = [
     {
       id: "1",
-      name: "Simon Kioko",
-      position: "CEO & Founder",
-      image: "/placeholder.svg?height=300&width=300",
-      bio: "With over 15 years of experience in real estate, Sarah leads our team with passion and expertise.",
+      name: "Andrew S",
+      position: "Real Estate Operations Manager",
+      image: "/andrew.png?height=300&width=300",
+      bio: "With over 5 years of experience in real estate, Andrew leads our team with passion and expertise.",
     },
     {
       id: "2",
-      name: "Michael Rodriguez",
+      name: "Haist Kimani",
       position: "Senior Real Estate Agent",
-      image: "/placeholder.svg?height=300&width=300",
-      bio: "Michael specializes in luxury properties and has closed over $50 million in sales.",
+      image: "/Haist.png?height=300&width=300",
+      bio: "Michael specializes in both residential and commercial properties and has deep knowledge on real estate marketing.",
     },
     {
       id: "3",
-      name: "Jennifer Lee",
-      position: "Marketing Director",
-      image: "/placeholder.svg?height=300&width=300",
-      bio: "Jennifer brings creative marketing strategies that help our properties stand out in the market.",
+      name: "Dennis Kimaita",
+      position: "Software Developer",
+      image: "/kimaita.png?height=300&width=300",
+      bio: "Kimaita specializes in coming up with innovative tech solutions to real-world problems.",
     },
-    {
-      id: "4",
-      name: "David Wilson",
-      position: "Property Manager",
-      image: "/placeholder.svg?height=300&width=300",
-      bio: "David ensures all our managed properties are maintained to the highest standards.",
-    },
+    // {
+    //   id: "4",
+    //   name: "David Wilson",
+    //   position: "Property Manager",
+    //   image: "/placeholder.svg?height=300&width=300",
+    //   bio: "David ensures all our managed properties are maintained to the highest standards.",
+    // },
   ]
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+    <div className="inline-flex grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
       {team.map((member) => (
         <div key={member.id} className="card overflow-hidden">
           <div className="aspect-square relative">
