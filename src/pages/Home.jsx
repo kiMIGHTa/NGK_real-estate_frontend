@@ -101,7 +101,7 @@ export default function Home() {
             </div>
           </div>
           <div className="container absolute inset-0 z-20 flex flex-col items-center justify-center text-white">
-            <h1 className="text-9xl md:text-5xl lg:text-6xl font-bold text-center mb-6 text-blue-300">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-center mb-6 text-blue-300">
               NGK AGENCY
             </h1>
             <p className="text-xl md:text-2xl text-center mb-8 max-w-2xl">
