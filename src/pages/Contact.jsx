@@ -88,8 +88,7 @@ export default function Contact() {
                   <h3 className="font-semibold mb-4">Our Location</h3>
                   <div className="w-full aspect-video">
                     <iframe
-                      width="400"
-                      height="250"
+                      className="w-full h-full"
                       frameBorder="0" 
                       style={{ border: 0 }}
                       referrerPolicy="no-referrer-when-downgrade"
