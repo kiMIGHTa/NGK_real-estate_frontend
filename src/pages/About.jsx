@@ -58,11 +58,11 @@ export default function About() {
               </div>
               <div className="w-full aspect-video">
                 <video
-                  src="/NGKKenya.mp4"
+                  src="https://pub-f3d59746bd4743ddb4dd83266a31a835.r2.dev/NGKKenya.mp4"
                   className="w-full h-full object-cover rounded-md border-3 border-black"
                   controls
                   // poster="/video-poster.jpg"
-                  preload="none" // Won't load until clicked
+                  preload="metadata" 
                 />
               </div>
             </div>
