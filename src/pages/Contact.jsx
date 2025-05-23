@@ -77,7 +77,14 @@ export default function Contact() {
                   <div className="flex items-start">
                     <Clock className="h-5 w-5 text-maroon mr-3 mt-0.5" />
                     <div>
-                      <h3 className="font-semibold">Saturday & Sunday</h3>
+                      <h3 className="font-semibold">Saturday</h3>
+                      <p className="text-gray-600">8:00 AM - 2:00 PM</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start">
+                    <Clock className="h-5 w-5 text-maroon mr-3 mt-0.5" />
+                    <div>
+                      <h3 className="font-semibold">Sunday</h3>
                       <p className="text-gray-600">Closed</p>
                     </div>
                   </div>
