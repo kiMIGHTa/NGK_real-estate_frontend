@@ -83,7 +83,7 @@ export default function Home() {
             <div
               className="absolute inset-0 bg-cover bg-center"
               style={{
-                backgroundImage: "url('/Home_image.webp')",
+                backgroundImage: "url('/home_image.webp')",
                 imageRendering: '-webkit-optimize-contrast'
               }}
             >
