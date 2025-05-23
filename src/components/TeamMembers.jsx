@@ -4,7 +4,7 @@ export default function TeamMembers() {
   const team = [
     {
       id: "1",
-      name: "Andrew S. ",
+      name: "Andrew S. Mayaka",
       position: "Real Estate Operations Manager",
       images: {
         webp: "/andrew.webp",
@@ -24,6 +24,16 @@ export default function TeamMembers() {
     },
     {
       id: "3",
+      name: "Zubbeida Wanyangi",
+      position: "Social Media Manager",
+      images: {
+        webp: "",
+        png: ""
+      },
+      bio: "",
+    },
+    {
+      id: "4",
       name: "Dennis Kimaita",
       position: "Software Developer",
       images: {
