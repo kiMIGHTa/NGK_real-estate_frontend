@@ -70,18 +70,17 @@ export default function Contact() {
                   <div className="flex items-start">
                     <Clock className="h-5 w-5 text-maroon mr-3 mt-0.5" />
                     <div>
-                      <h3 className="font-semibold">Monday - Friday</h3>
-                      <p className="text-gray-600">8:00 AM - 5:00 PM</p>
+                      <h3 className="font-semibold">Monday - Sunday</h3>
+                      <p className="text-gray-600">Open 24 Hours</p>
                     </div>
                   </div>
                   <div className="flex items-start">
                     <Clock className="h-5 w-5 text-maroon mr-3 mt-0.5" />
                     <div>
-                      <h3 className="font-semibold">Saturday & Sunday</h3>
-                      <p className="text-gray-600">Closed</p>
+                      <h3 className="font-semibold">Customer Support</h3>
+                      <p className="text-gray-600">Always Available</p>
                     </div>
                   </div>
-
                 </div>
 
                 <div className="mt-8">
@@ -89,7 +88,7 @@ export default function Contact() {
                   <div className="w-full aspect-video">
                     <iframe
                       className="w-full h-full"
-                      frameBorder="0" 
+                      frameBorder="0"
                       style={{ border: 0 }}
                       referrerPolicy="no-referrer-when-downgrade"
                       src={`https://www.google.com/maps/embed/v1/place?key=${import.meta.env.VITE_GOOGLE_MAPS_API_KEY}&q=Reliable+Towers,Nairobi+Kenya`}
