@@ -29,7 +29,7 @@ export default function Header() {
           </Link>
         </nav>
         <a
-          href="tel:+254769375587"
+          href="tel:+254746493184"
           className="flex items-center gap-2 hover:text-maroon transition-colors no-underline"
           aria-label="Call +254 719 064 000"
         >
