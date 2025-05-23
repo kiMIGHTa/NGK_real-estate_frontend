@@ -61,8 +61,11 @@ export default function About() {
                   src="https://pub-f3d59746bd4743ddb4dd83266a31a835.r2.dev/NGKKenya.mp4"
                   className="w-full h-full object-cover rounded-md border-3 border-black"
                   controls
-                  // poster="/video-poster.jpg"
-                  preload="metadata" 
+                  autoPlay
+                  muted
+                  playsInline
+                  preload="auto"
+                  // poster="/video-poster.jpg" // Recommended for better UX
                 />
               </div>
             </div>

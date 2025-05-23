@@ -6,7 +6,18 @@ import { Menu, Phone } from "lucide-react"
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const phoneNumber = "+254719064000"
+  const formattedNumber = "+254 719 064 000"
 
+  const handlePhoneClick = () => {
+    const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent)
+    
+    if (isMobile) {
+      window.location.href = `tel:${phoneNumber}`
+    } else {
+      window.open(`https://wa.me/${phoneNumber.replace('+', '')}`)
+    }
+  }
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-white">
       <div className="container flex h-20 items-center justify-between">
@@ -28,10 +39,23 @@ export default function Header() {
             Contact
           </Link>
         </nav>
-        <div className="flex items-center gap-2">
+        <div
+          onClick={handlePhoneClick}
+          className="flex items-center gap-2 cursor-pointer hover:text-maroon transition-colors"
+          role="button"
+          tabIndex={0}
+        >
           <Phone className="h-5 w-5" />
-          <p>+254 719064000</p>
+          <span className="text-current">{formattedNumber}</span>
         </div>
+        {/* <a
+          href="tel:+254746493184"
+          className="flex items-center gap-2 hover:text-maroon transition-colors no-underline"
+          aria-label="Call +254 719 064 000"
+        >
+          <Phone className="h-5 w-5" />
+          <span className="text-current">+254 719 064 000</span>
+        </a> */}
         <button className="md:hidden border border-gray-300 rounded-md p-2" onClick={() => setIsMenuOpen(!isMenuOpen)}>
           <Menu className="h-5 w-5" />
           <span className="sr-only">Toggle menu</span>
