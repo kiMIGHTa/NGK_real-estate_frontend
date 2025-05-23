@@ -64,7 +64,7 @@ export default function About() {
                   autoPlay
                   muted
                   playsInline
-                  preload="metadata"
+                  preload="auto"
                   // poster="/video-poster.jpg" // Recommended for better UX
                 />
               </div>
