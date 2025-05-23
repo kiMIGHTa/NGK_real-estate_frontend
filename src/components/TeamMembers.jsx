@@ -24,13 +24,13 @@ export default function TeamMembers() {
     },
     {
       id: "3",
-      name: "Zubbeida Wanyangi",
+      name: "Sharon Saruni",
       position: "Social Media Manager",
       images: {
-        webp: "",
-        png: ""
+        webp: "placeholder.webp",
+        png: "placeholder.png"
       },
-      bio: "",
+      bio: "Saruni is a creative and strategic social media expert who crafts compelling digital narratives for our real estate brand. With a keen eye for trends and engagement, she manages our online presence across platforms, connecting clients with properties through innovative content and targeted campaigns.",
     },
     {
       id: "4",
