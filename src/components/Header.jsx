@@ -28,10 +28,14 @@ export default function Header() {
             Contact
           </Link>
         </nav>
-        <div className="flex items-center gap-2">
+        <a
+          href="tel:+254769375587"
+          className="flex items-center gap-2 hover:text-maroon transition-colors no-underline"
+          aria-label="Call +254 719 064 000"
+        >
           <Phone className="h-5 w-5" />
-          <p>+254 719064000</p>
-        </div>
+          <span className="text-current">+254 719 064 000</span>
+        </a>
         <button className="md:hidden border border-gray-300 rounded-md p-2" onClick={() => setIsMenuOpen(!isMenuOpen)}>
           <Menu className="h-5 w-5" />
           <span className="sr-only">Toggle menu</span>
